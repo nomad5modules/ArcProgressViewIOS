@@ -14,7 +14,6 @@
 		6003F598195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F596195388D20070C39A /* InfoPlist.strings */; };
 		6003F59A195388D20070C39A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F599195388D20070C39A /* main.m */; };
 		6003F59E195388D20070C39A /* DemoAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F59D195388D20070C39A /* DemoAppDelegate.m */; };
-		6003F5A7195388D20070C39A /* DemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5A6195388D20070C39A /* DemoViewController.m */; };
 		6003F5A9195388D20070C39A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5A8195388D20070C39A /* Images.xcassets */; };
 		6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F5AF195388D20070C39A /* XCTest.framework */; };
 		6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
@@ -24,6 +23,8 @@
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
 		C47159E51B9D29C9B60E95D7 /* Pods_CircularProgressView_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E09B0617D4256938D1E5638 /* Pods_CircularProgressView_Tests.framework */; };
+		E705E1A922A446D500A2568A /* DemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E705E1A822A446D500A2568A /* DemoViewController.swift */; };
+		E78C2AA622A44ADF0088EB1A /* CircularProgressView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E78C2AA522A44ADF0088EB1A /* CircularProgressView.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +39,7 @@
 
 /* Begin PBXFileReference section */
 		265FCA845ACB1D4D3C490452 /* Pods-CircularProgressView_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CircularProgressView_Tests.release.xcconfig"; path = "Target Support Files/Pods-CircularProgressView_Tests/Pods-CircularProgressView_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		279A54C2909CB15E1E84C8C6 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		279A54C2909CB15E1E84C8C6 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* CircularProgressView_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CircularProgressView_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -49,8 +50,6 @@
 		6003F59B195388D20070C39A /* CircularProgressView-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CircularProgressView-Prefix.pch"; sourceTree = "<group>"; };
 		6003F59C195388D20070C39A /* DemoAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoAppDelegate.h; sourceTree = "<group>"; };
 		6003F59D195388D20070C39A /* DemoAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoAppDelegate.m; sourceTree = "<group>"; };
-		6003F5A5195388D20070C39A /* DemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoViewController.h; sourceTree = "<group>"; };
-		6003F5A6195388D20070C39A /* DemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoViewController.m; sourceTree = "<group>"; };
 		6003F5A8195388D20070C39A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		6003F5AE195388D20070C39A /* CircularProgressView_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CircularProgressView_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F5AF195388D20070C39A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -59,14 +58,17 @@
 		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		64108A9AEBCFAA9FDD8AE1EB /* Pods-CircularProgressView_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CircularProgressView_Example.release.xcconfig"; path = "Target Support Files/Pods-CircularProgressView_Example/Pods-CircularProgressView_Example.release.xcconfig"; sourceTree = "<group>"; };
-		6445212C5C77B9C7AEC173DF /* CircularProgressView.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = CircularProgressView.podspec; path = ../CircularProgressView.podspec; sourceTree = "<group>"; };
+		6445212C5C77B9C7AEC173DF /* CircularProgressView.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = CircularProgressView.podspec; path = ../CircularProgressView.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7E09B0617D4256938D1E5638 /* Pods_CircularProgressView_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CircularProgressView_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		98B004BF9EB832849F9D262A /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		98B004BF9EB832849F9D262A /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		9C79F2804649CA9E798730AE /* Pods_CircularProgressView_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CircularProgressView_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A64A6E7C4B418BCB4C00069E /* Pods-CircularProgressView_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CircularProgressView_Example.debug.xcconfig"; path = "Target Support Files/Pods-CircularProgressView_Example/Pods-CircularProgressView_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		CC6A614E5B3D94FCB7C8F7C3 /* Pods-CircularProgressView_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CircularProgressView_Tests.debug.xcconfig"; path = "Target Support Files/Pods-CircularProgressView_Tests/Pods-CircularProgressView_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		E705E1A722A446D500A2568A /* CircularProgressView_Example-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CircularProgressView_Example-Bridging-Header.h"; sourceTree = "<group>"; };
+		E705E1A822A446D500A2568A /* DemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoViewController.swift; sourceTree = "<group>"; };
+		E78C2AA522A44ADF0088EB1A /* CircularProgressView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CircularProgressView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E78C2AA622A44ADF0088EB1A /* CircularProgressView.framework in Frameworks */,
 				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
@@ -106,6 +109,7 @@
 				A5693AFD3680F742C2FE43BC /* Pods */,
 			);
 			sourceTree = "<group>";
+			wrapsLines = 0;
 		};
 		6003F58B195388D20070C39A /* Products */ = {
 			isa = PBXGroup;
@@ -119,6 +123,7 @@
 		6003F58C195388D20070C39A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E78C2AA522A44ADF0088EB1A /* CircularProgressView.framework */,
 				6003F58D195388D20070C39A /* Foundation.framework */,
 				6003F58F195388D20070C39A /* CoreGraphics.framework */,
 				6003F591195388D20070C39A /* UIKit.framework */,
@@ -135,11 +140,11 @@
 				6003F59C195388D20070C39A /* DemoAppDelegate.h */,
 				6003F59D195388D20070C39A /* DemoAppDelegate.m */,
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
-				6003F5A5195388D20070C39A /* DemoViewController.h */,
-				6003F5A6195388D20070C39A /* DemoViewController.m */,
 				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
+				E705E1A822A446D500A2568A /* DemoViewController.swift */,
+				E705E1A722A446D500A2568A /* CircularProgressView_Example-Bridging-Header.h */,
 			);
 			name = "Example for CircularProgressView";
 			path = CircularProgressView;
@@ -193,7 +198,6 @@
 				CC6A614E5B3D94FCB7C8F7C3 /* Pods-CircularProgressView_Tests.debug.xcconfig */,
 				265FCA845ACB1D4D3C490452 /* Pods-CircularProgressView_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -249,7 +253,12 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "mlostek@gmail.com";
 				TargetAttributes = {
+					6003F589195388D20070C39A = {
+						DevelopmentTeam = E4H6XCERNK;
+						LastSwiftMigration = 1020;
+					};
 					6003F5AD195388D20070C39A = {
+						DevelopmentTeam = E4H6XCERNK;
 						TestTargetID = 6003F589195388D20070C39A;
 					};
 				};
@@ -259,6 +268,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -386,8 +396,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				6003F59E195388D20070C39A /* DemoAppDelegate.m in Sources */,
-				6003F5A7195388D20070C39A /* DemoViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
+				E705E1A922A446D500A2568A /* DemoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -515,12 +525,18 @@
 			baseConfigurationReference = A64A6E7C4B418BCB4C00069E /* Pods-CircularProgressView_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = E4H6XCERNK;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CircularProgressView/CircularProgressView-Prefix.pch";
 				INFOPLIST_FILE = "CircularProgressView/CircularProgressView-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CircularProgressView/CircularProgressView_Example-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -530,12 +546,17 @@
 			baseConfigurationReference = 64108A9AEBCFAA9FDD8AE1EB /* Pods-CircularProgressView_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = E4H6XCERNK;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CircularProgressView/CircularProgressView-Prefix.pch";
 				INFOPLIST_FILE = "CircularProgressView/CircularProgressView-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CircularProgressView/CircularProgressView_Example-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -544,7 +565,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = CC6A614E5B3D94FCB7C8F7C3 /* Pods-CircularProgressView_Tests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = E4H6XCERNK;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -568,7 +591,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 265FCA845ACB1D4D3C490452 /* Pods-CircularProgressView_Tests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = E4H6XCERNK;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",

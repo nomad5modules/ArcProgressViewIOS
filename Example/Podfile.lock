@@ -1,0 +1,27 @@
+PODS:
+  - CircularProgressView (0.1.0)
+  - Expecta (1.0.6)
+  - Specta (1.0.7)
+
+DEPENDENCIES:
+  - CircularProgressView (from `../`)
+  - Expecta
+  - Specta
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Expecta
+    - Specta
+
+EXTERNAL SOURCES:
+  CircularProgressView:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  CircularProgressView: 3545fe81c4b74d15f314c5ac5e7c220495c1639d
+  Expecta: 3b6bd90a64b9a1dcb0b70aa0e10a7f8f631667d5
+  Specta: 3e1bd89c3517421982dc4d1c992503e48bd5fe66
+
+PODFILE CHECKSUM: f43f85271021b05c527dfbd287235d60be810aef
+
+COCOAPODS: 1.7.0
