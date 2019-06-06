@@ -2,15 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="43d0a329-b672-4924-bb91-470130c61bf6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/CircularProgressView/DemoAppDelegate.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CircularProgressView/LaunchScreen.storyboard" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/xcode.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/xcode.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CircularProgressView.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/CircularProgressView.xcodeproj/project.pbxproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CircularProgressView/Base.lproj/LaunchScreen.storyboard" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CircularProgressView/Base.lproj/Main.storyboard" beforeDir="false" afterPath="$PROJECT_DIR$/CircularProgressView/Base.lproj/Main.storyboard" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CircularProgressView/CircularProgressView-Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/CircularProgressView/CircularProgressView-Info.plist" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CircularProgressView/DemoAppDelegate.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CircularProgressView/DemoAppDelegate.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CircularProgressView/main.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CircularProgressView/CircularProgressView-Prefix.pch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CircularProgressView/CircularProgressView_Example-Bridging-Header.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CircularProgressView/DemoViewController.swift" beforeDir="false" afterPath="$PROJECT_DIR$/CircularProgressView/DemoViewController.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CircularProgressView/en.lproj/InfoPlist.strings" beforeDir="false" />
     </list>
     <ignored path="$USER_HOME$/Library/Caches/AppCode2019.1/DerivedData/CircularProgressView-aqvmnxfewbdpqudzquwsxsygepdm/Build/Intermediates.noindex/" />
     <ignored path="$USER_HOME$/Library/Caches/AppCode2019.1/DerivedData/CircularProgressView-eyolcikdnilinvapstojchrrvmxz/Build/Intermediates.noindex/" />
@@ -31,8 +31,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../CircularProgressView/Classes/CircularProgressView.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="62">
-              <caret line="58" column="22" selection-start-line="58" selection-start-column="22" selection-end-line="58" selection-end-column="22" />
+            <state relative-caret-position="-1617">
+              <caret line="20" column="30" lean-forward="true" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -48,26 +48,36 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CircularProgressView/CircularProgressView_Example-Bridging-Header.h">
+        <entry file="file://$PROJECT_DIR$/CircularProgressView/CircularProgressView-Info.plist">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CircularProgressView/DemoAppDelegate.swift">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" selection-start-line="4" selection-end-line="4" />
+            <state relative-caret-position="210">
+              <caret line="14" column="24" lean-forward="true" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/CircularProgressView/DemoViewController.swift">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="22" column="34" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="53" />
+              <folding>
+                <element signature="e#176#188#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CircularProgressView/CircularProgressView-Info.plist">
+        <entry file="mock:///CircularProgressView.CircularProgressView.swift">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-307" />
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/CircularProgressView/DemoAppDelegate.swift">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
+            <state relative-caret-position="282">
+              <caret line="27" column="14" selection-start-line="27" selection-start-column="14" selection-end-line="27" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -82,6 +92,7 @@
       <list>
         <option value="$PROJECT_DIR$/CircularProgressView/main.m" />
         <option value="$PROJECT_DIR$/CircularProgressView/DemoAppDelegate.swift" />
+        <option value="$PROJECT_DIR$/CircularProgressView/DemoViewController.swift" />
       </list>
     </option>
   </component>
@@ -104,7 +115,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -116,12 +126,6 @@
               <item name="" type="efc3779f:XcodeRootNode" />
               <item name="CircularProgressView" type="1d218c8b:XcodeProjectNode" />
               <item name="Example for CircularProgressView" type="fcab9f18:XcodeViewNode" />
-            </path>
-            <path>
-              <item name="" type="efc3779f:XcodeRootNode" />
-              <item name="CircularProgressView" type="1d218c8b:XcodeProjectNode" />
-              <item name="Example for CircularProgressView" type="fcab9f18:XcodeViewNode" />
-              <item name="Supporting Files" type="fcab9f18:XcodeViewNode" />
             </path>
             <path>
               <item name="" type="efc3779f:XcodeRootNode" />
@@ -143,6 +147,7 @@
         </subPane>
       </pane>
       <pane id="Cidr.FilesView" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -152,6 +157,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/CircularProgressView.xcworkspace" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="XcodeSettings" />
   </component>
   <component name="RunDashboard">
@@ -170,14 +176,15 @@
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26290706" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27720413" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -199,26 +206,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CircularProgressView/DemoAppDelegate.m">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CircularProgressView/DemoAppDelegate.h">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CircularProgressView/DemoViewController.swift">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CircularProgressView/main.m">
+    <entry file="file://$PROJECT_DIR$/CircularProgressView/DemoAppDelegate.m" />
+    <entry file="file://$PROJECT_DIR$/CircularProgressView/DemoAppDelegate.h" />
+    <entry file="file://$PROJECT_DIR$/CircularProgressView/main.m" />
+    <entry file="file://$PROJECT_DIR$/CircularProgressView/DemoAppDelegate.swift">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="16" column="5" lean-forward="true" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+        <state relative-caret-position="210">
+          <caret line="14" column="24" lean-forward="true" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CircularProgressView/DemoAppDelegate.swift">
+    <entry file="file://$PROJECT_DIR$/../CircularProgressView/Classes/CircularProgressView.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
+        <state relative-caret-position="-1617">
+          <caret line="20" column="30" lean-forward="true" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CircularProgressView/DemoViewController.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="34" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="53" />
+          <folding>
+            <element signature="e#176#188#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

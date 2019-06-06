@@ -12,7 +12,6 @@
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
-		6003F598195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F596195388D20070C39A /* InfoPlist.strings */; };
 		6003F5A9195388D20070C39A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5A8195388D20070C39A /* Images.xcassets */; };
 		6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F5AF195388D20070C39A /* XCTest.framework */; };
 		6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
@@ -22,6 +21,7 @@
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
 		C47159E51B9D29C9B60E95D7 /* Pods_CircularProgressView_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E09B0617D4256938D1E5638 /* Pods_CircularProgressView_Tests.framework */; };
 		E705E1A922A446D500A2568A /* DemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E705E1A822A446D500A2568A /* DemoViewController.swift */; };
+		E73D29A022A99A4700035EF5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E73D299F22A99A4700035EF5 /* LaunchScreen.storyboard */; };
 		E78C2AA622A44ADF0088EB1A /* CircularProgressView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E78C2AA522A44ADF0088EB1A /* CircularProgressView.framework */; };
 /* End PBXBuildFile section */
 
@@ -38,14 +38,12 @@
 /* Begin PBXFileReference section */
 		265FCA845ACB1D4D3C490452 /* Pods-CircularProgressView_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CircularProgressView_Tests.release.xcconfig"; path = "Target Support Files/Pods-CircularProgressView_Tests/Pods-CircularProgressView_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		279A54C2909CB15E1E84C8C6 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		44A4D15C11038BC764F259BB /* CircularProgressView-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.info; path = "CircularProgressView-Info.plist"; sourceTree = "<group>"; };
 		44A4D15D11A9281DDF5F82A1 /* DemoAppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoAppDelegate.swift; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* CircularProgressView_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CircularProgressView_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		6003F591195388D20070C39A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		6003F595195388D20070C39A /* CircularProgressView-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CircularProgressView-Info.plist"; sourceTree = "<group>"; };
-		6003F597195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		6003F59B195388D20070C39A /* CircularProgressView-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CircularProgressView-Prefix.pch"; sourceTree = "<group>"; };
 		6003F5A8195388D20070C39A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		6003F5AE195388D20070C39A /* CircularProgressView_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CircularProgressView_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F5AF195388D20070C39A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -61,8 +59,8 @@
 		9C79F2804649CA9E798730AE /* Pods_CircularProgressView_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CircularProgressView_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A64A6E7C4B418BCB4C00069E /* Pods-CircularProgressView_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CircularProgressView_Example.debug.xcconfig"; path = "Target Support Files/Pods-CircularProgressView_Example/Pods-CircularProgressView_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		CC6A614E5B3D94FCB7C8F7C3 /* Pods-CircularProgressView_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CircularProgressView_Tests.debug.xcconfig"; path = "Target Support Files/Pods-CircularProgressView_Tests/Pods-CircularProgressView_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		E705E1A722A446D500A2568A /* CircularProgressView_Example-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CircularProgressView_Example-Bridging-Header.h"; sourceTree = "<group>"; };
 		E705E1A822A446D500A2568A /* DemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoViewController.swift; sourceTree = "<group>"; };
+		E73D299F22A99A4700035EF5 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E78C2AA522A44ADF0088EB1A /* CircularProgressView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CircularProgressView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -132,25 +130,15 @@
 		6003F593195388D20070C39A /* Example for CircularProgressView */ = {
 			isa = PBXGroup;
 			children = (
-				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
-				6003F5A8195388D20070C39A /* Images.xcassets */,
-				6003F594195388D20070C39A /* Supporting Files */,
-				E705E1A822A446D500A2568A /* DemoViewController.swift */,
-				E705E1A722A446D500A2568A /* CircularProgressView_Example-Bridging-Header.h */,
 				44A4D15D11A9281DDF5F82A1 /* DemoAppDelegate.swift */,
+				E705E1A822A446D500A2568A /* DemoViewController.swift */,
+				6003F5A8195388D20070C39A /* Images.xcassets */,
+				E73D299F22A99A4700035EF5 /* LaunchScreen.storyboard */,
+				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
+				44A4D15C11038BC764F259BB /* CircularProgressView-Info.plist */,
 			);
 			name = "Example for CircularProgressView";
 			path = CircularProgressView;
-			sourceTree = "<group>";
-		};
-		6003F594195388D20070C39A /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				6003F595195388D20070C39A /* CircularProgressView-Info.plist */,
-				6003F596195388D20070C39A /* InfoPlist.strings */,
-				6003F59B195388D20070C39A /* CircularProgressView-Prefix.pch */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		6003F5B5195388D20070C39A /* Tests */ = {
@@ -176,8 +164,8 @@
 			isa = PBXGroup;
 			children = (
 				6445212C5C77B9C7AEC173DF /* CircularProgressView.podspec */,
-				98B004BF9EB832849F9D262A /* README.md */,
 				279A54C2909CB15E1E84C8C6 /* LICENSE */,
+				98B004BF9EB832849F9D262A /* README.md */,
 			);
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
@@ -260,6 +248,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -280,8 +269,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
+				E73D29A022A99A4700035EF5 /* LaunchScreen.storyboard in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
-				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -409,14 +398,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		6003F596195388D20070C39A /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6003F597195388D20070C39A /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
 		6003F5B8195388D20070C39A /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -515,8 +496,9 @@
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "CircularProgressView/CircularProgressView_Example-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_PRECOMPILE_BRIDGING_HEADER = NO;
 				SWIFT_VERSION = 5.0;
 				WRAPPER_EXTENSION = app;
 			};
@@ -536,7 +518,8 @@
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "CircularProgressView/CircularProgressView_Example-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_PRECOMPILE_BRIDGING_HEADER = NO;
 				SWIFT_VERSION = 5.0;
 				WRAPPER_EXTENSION = app;
 			};
