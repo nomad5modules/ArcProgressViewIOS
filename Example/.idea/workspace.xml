@@ -2,15 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="43d0a329-b672-4924-bb91-470130c61bf6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/CircularProgressView/LaunchScreen.storyboard" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CircularProgressView/CPV.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CircularProgressView/VA.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CircularProgressView/Classes/CircularProgressView.h" beforeDir="false" afterPath="$PROJECT_DIR$/../CircularProgressView/Classes/CircularProgressView.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CircularProgressView/Classes/CircularProgressView.m" beforeDir="false" afterPath="$PROJECT_DIR$/../CircularProgressView/Classes/CircularProgressView.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CircularProgressView/Classes/ValueAnimation.h" beforeDir="false" afterPath="$PROJECT_DIR$/../CircularProgressView/Classes/ValueAnimation.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CircularProgressView/Classes/ValueAnimation.m" beforeDir="false" afterPath="$PROJECT_DIR$/../CircularProgressView/Classes/ValueAnimation.m" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CircularProgressView.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/CircularProgressView.xcodeproj/project.pbxproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CircularProgressView/Base.lproj/Main.storyboard" beforeDir="false" afterPath="$PROJECT_DIR$/CircularProgressView/Base.lproj/Main.storyboard" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CircularProgressView/CircularProgressView-Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/CircularProgressView/CircularProgressView-Info.plist" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CircularProgressView/CircularProgressView-Prefix.pch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CircularProgressView/CircularProgressView_Example-Bridging-Header.h" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/CircularProgressView/DemoViewController.swift" beforeDir="false" afterPath="$PROJECT_DIR$/CircularProgressView/DemoViewController.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CircularProgressView/en.lproj/InfoPlist.strings" beforeDir="false" />
     </list>
     <ignored path="$USER_HOME$/Library/Caches/AppCode2019.1/DerivedData/CircularProgressView-aqvmnxfewbdpqudzquwsxsygepdm/Build/Intermediates.noindex/" />
     <ignored path="$USER_HOME$/Library/Caches/AppCode2019.1/DerivedData/CircularProgressView-eyolcikdnilinvapstojchrrvmxz/Build/Intermediates.noindex/" />
@@ -25,38 +26,72 @@
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../CircularProgressView/Classes/CircularProgressView.h">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" column="35" selection-end-line="23" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../CircularProgressView/Classes/CircularProgressView.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1617">
-              <caret line="20" column="30" lean-forward="true" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="30" />
+            <state relative-caret-position="290">
+              <caret line="108" column="17" selection-end-line="211" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../CircularProgressView/Classes/ValueAnimation.h">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="18" column="6" selection-start-column="2" selection-end-line="18" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CircularProgressView/CPV.swift">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="99">
+              <caret line="126" selection-start-line="126" selection-end-line="126" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../CircularProgressView/Classes/ValueAnimation.m">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CircularProgressView/CircularProgressView-Info.plist">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CircularProgressView/DemoAppDelegate.swift">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="24" lean-forward="true" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
+            <state relative-caret-position="-667">
+              <caret line="22" column="7" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CircularProgressView/VA.swift">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="151">
+              <caret line="20" column="9" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$APPLICATION_HOME_DIR$/Resources/module_cache_10E1001.zip!/5.0.1/x86_64/iphonesimulator12.2/Darwin.C.math/Darwin.C.math.swift">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="142">
+              <caret line="289" column="12" selection-start-line="289" selection-start-column="12" selection-end-line="289" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$APPLICATION_HOME_DIR$/Resources/module_cache_10E1001.zip!/5.0.1/x86_64/iphonesimulator12.2/UIKit.NSAttributedString/UIKit.NSAttributedString.swift">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="9" column="50" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="50" />
             </state>
           </provider>
         </entry>
@@ -64,25 +99,25 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/CircularProgressView/DemoViewController.swift">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" column="34" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="53" />
-              <folding>
-                <element signature="e#176#188#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="313">
+              <caret line="24" selection-start-line="24" selection-end-line="24" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="mock:///CircularProgressView.CircularProgressView.swift">
+        <entry file="file://$PROJECT_DIR$/../CircularProgressView.podspec">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="282">
-              <caret line="27" column="14" selection-start-line="27" selection-start-column="14" selection-end-line="27" selection-end-column="14" />
-            </state>
+            <state relative-caret-position="-233" />
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>paragraph</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -92,7 +127,15 @@
       <list>
         <option value="$PROJECT_DIR$/CircularProgressView/main.m" />
         <option value="$PROJECT_DIR$/CircularProgressView/DemoAppDelegate.swift" />
+        <option value="$PROJECT_DIR$/../CircularProgressView/Classes/CPV.swift" />
+        <option value="$PROJECT_DIR$/../VA.swift" />
+        <option value="$PROJECT_DIR$/CircularProgressView/VA.swift" />
+        <option value="$PROJECT_DIR$/../CircularProgressView/Classes/CircularProgressView.h" />
+        <option value="$PROJECT_DIR$/../CircularProgressView/Classes/CircularProgressView.m" />
+        <option value="$PROJECT_DIR$/../CircularProgressView/Classes/ValueAnimation.h" />
+        <option value="$PROJECT_DIR$/../CircularProgressView/Classes/ValueAnimation.m" />
         <option value="$PROJECT_DIR$/CircularProgressView/DemoViewController.swift" />
+        <option value="$PROJECT_DIR$/CircularProgressView/CPV.swift" />
       </list>
     </option>
   </component>
@@ -101,6 +144,7 @@
       <scope name="ReactNative" />
     </order>
   </component>
+  <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
   <component name="ProjectFrameBounds">
     <option name="x" value="1280" />
     <option name="y" value="-257" />
@@ -142,6 +186,13 @@
               <item name="Development Pods" type="fcab9f18:XcodeViewNode" />
               <item name="CircularProgressView" type="fcab9f18:XcodeViewNode" />
             </path>
+            <path>
+              <item name="" type="efc3779f:XcodeRootNode" />
+              <item name="Pods" type="1d218c8b:XcodeProjectNode" />
+              <item name="Development Pods" type="fcab9f18:XcodeViewNode" />
+              <item name="CircularProgressView" type="fcab9f18:XcodeViewNode" />
+              <item name="Pod" type="fcab9f18:XcodeViewNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -174,17 +225,16 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27720413" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.223193" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" />
+      <window_info anchor="bottom" id="Messages" weight="0.31506848" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32876712" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.4" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.34246576" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -196,6 +246,61 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
     </layout>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="proper demo application" />
+    <MESSAGE value="updated app icon" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated app icon" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/../CircularProgressView/Classes/CircularProgressView.m</url>
+          <line>100</line>
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/CircularProgressView/CPV.swift</url>
+          <line>83</line>
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/CircularProgressView/CPV.swift</url>
+          <line>47</line>
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/CircularProgressView/CPV.swift</url>
+          <line>87</line>
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/CircularProgressView/CPV.swift</url>
+          <line>96</line>
+          <option name="timeStamp" value="32" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/CircularProgressView/CPV.swift</url>
+          <line>140</line>
+          <option name="timeStamp" value="33" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="AppleRunConfiguration">
+        <watch expression="self.progress" language="Swift" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="watch">
+      <expression>
+        <expression-string>self.progress</expression-string>
+        <language-id>Swift</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/CircularProgressView/DemoViewController.m" />
@@ -212,24 +317,106 @@
     <entry file="file://$PROJECT_DIR$/CircularProgressView/DemoAppDelegate.swift">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
-          <caret line="14" column="24" lean-forward="true" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
+          <caret line="14" column="24" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CircularProgressView/CircularProgressView-Info.plist">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/Resources/module_cache_10E1001.zip!/5.0.1/x86_64/iphonesimulator12.2/Swift/Collection.Lazy Views.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="81" column="23" selection-start-line="81" selection-start-column="23" selection-end-line="81" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/Resources/module_cache_10E1001.zip!/5.0.1/x86_64/iphonesimulator12.2/UIKit.UIGraphics/UIKit.UIGraphics.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="11" column="12" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/Resources/module_cache_10E1001.zip!/5.0.1/x86_64/iphonesimulator12.2/ObjectiveC.NSObject/ObjectiveC.NSObject.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="60" column="14" selection-start-line="60" selection-start-column="14" selection-end-line="60" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/Resources/module_cache_10E1001.zip!/5.0.1/x86_64/iphonesimulator12.2/UIKit.NSParagraphStyle/UIKit.NSParagraphStyle.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="142">
+          <caret line="58" column="30" selection-start-line="58" selection-start-column="30" selection-end-line="58" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/Resources/module_cache_10E1001.zip!/5.0.1/x86_64/iphonesimulator12.2/Darwin.C.math/Darwin.C.math.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="142">
+          <caret line="289" column="12" selection-start-line="289" selection-start-column="12" selection-end-line="289" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/Resources/module_cache_10E1001.zip!/5.0.1/x86_64/iphonesimulator12.2/UIKit.NSAttributedString/UIKit.NSAttributedString.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="9" column="50" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../CircularProgressView.podspec">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-233" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CircularProgressView/VA.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="151">
+          <caret line="20" column="9" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../CircularProgressView/Classes/CircularProgressView.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="35" selection-end-line="23" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../CircularProgressView/Classes/CircularProgressView.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1617">
-          <caret line="20" column="30" lean-forward="true" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="30" />
+        <state relative-caret-position="290">
+          <caret line="108" column="17" selection-end-line="211" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../CircularProgressView/Classes/ValueAnimation.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="6" selection-start-column="2" selection-end-line="18" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../CircularProgressView/Classes/ValueAnimation.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-667">
+          <caret line="22" column="7" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CircularProgressView/CPV.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="99">
+          <caret line="126" selection-start-line="126" selection-end-line="126" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CircularProgressView/DemoViewController.swift">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="34" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="53" />
-          <folding>
-            <element signature="e#176#188#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="313">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
         </state>
       </provider>
     </entry>
