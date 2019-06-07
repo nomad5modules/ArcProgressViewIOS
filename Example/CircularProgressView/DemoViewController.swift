@@ -1,7 +1,7 @@
 //  Created by Martin Mlostek on 02.06.19.
 
 import UIKit
-//import CircularProgressView
+import CircularProgressView
 
 /// The main view controller
 class DemoViewController: UIViewController {

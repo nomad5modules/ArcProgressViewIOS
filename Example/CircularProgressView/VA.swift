@@ -7,38 +7,33 @@ let kStepSize = 0.015
 
 typealias MyAnimationBlock = (Double) -> Void
 
+/// Animate over a given time
 class ValueAnimation {
     private var timer:          Timer?
     private var totalRunTime:   Double = 0.0 // Total duration of the animation (delay not included)
     private var currentRuntime: Double = 0.0 // Time the animation is already running
     private var animationBlock: MyAnimationBlock!
 
-
-
-/**
-     * Start the animation
-     */
-    func start(_ animationBlock: @escaping MyAnimationBlock, _ runtime: Double, delay: Double) {
-        if timer != nil {
-            timer?.invalidate()
-        }
-
-        self.animationBlock = animationBlock
+    /// Start a new animation
+    func start(_ block: @escaping MyAnimationBlock, _ runtime: Double, delay: Double) {
+        // clear existing timer first
+        timer?.invalidate()
         timer = nil
+        // save
+        animationBlock = block
         totalRunTime = runtime
         currentRuntime = 0
 
         if delay > 0 {
-            // Wait to delay the start. Convert delay from millis to seconds
-            let delaySeconds: Double = delay / 1000.0
-            timer = Timer.scheduledTimer(timeInterval: TimeInterval(delaySeconds),
+            // delay
+            timer = Timer.scheduledTimer(timeInterval: delay / 1000.0,
                                          target: self,
                                          selector: #selector(delayTick),
                                          userInfo: nil,
                                          repeats: false)
         } else {
-            // Run the animation
-            timer = Timer.scheduledTimer(timeInterval: TimeInterval(kStepSize),
+            // the animation
+            timer = Timer.scheduledTimer(timeInterval: kStepSize,
                                          target: self,
                                          selector: #selector(animationTick),
                                          userInfo: nil,
@@ -46,25 +41,19 @@ class ValueAnimation {
         }
     }
 
-/**
-     * One delay tick
-     */
+
+    /// One delay tick, continue with real animation
     @objc func delayTick(_ delayTimer: Timer?) {
-        // End of delay -> run animation
         delayTimer?.invalidate()
-        timer = Timer.scheduledTimer(timeInterval: TimeInterval(kStepSize), target: self, selector: #selector(ValueAnimation.animationTick(_:)), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: kStepSize,
+                                     target: self,
+                                     selector: #selector(animationTick),
+                                     userInfo: nil,
+                                     repeats: true)
     }
 
-//
-//  The converted code is limited to 2 KB.
-//  Upgrade your plan to remove this limitation.
-//
-//  %< ----------------------------------------------------------------------------------------- %<
 
-    //  Converted to Swift 5 by Swiftify v5.0.23302 - https://objectivec2swift.com/
-/**
-     * One animation tick
-     */
+    /// One animation tick
     @objc func animationTick(_ animationTimer: Timer?) {
         let step = 1000.0 * kStepSize // step size/length in milli seconds
         currentRuntime += step
@@ -82,9 +71,7 @@ class ValueAnimation {
         }
     }
 
-/**
-     * Ease out animation
-     */
+    /// Easing out animation
     func customEaseOut(_ t: Double) -> Double {
         // Use any easing function you like to animate your values...
         // http://rechneronline.de/function-graphs/

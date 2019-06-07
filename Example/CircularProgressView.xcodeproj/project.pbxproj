@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		2FC50CE54F5C7EC415E5A81C /* Pods_CircularProgressView_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C79F2804649CA9E798730AE /* Pods_CircularProgressView_Example.framework */; };
 		44A4D3AE9C374BE23E90675A /* DemoAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A4D15D11A9281DDF5F82A1 /* DemoAppDelegate.swift */; };
-		44A4DEE74E782881E37EB3F8 /* CPV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A4D29665B6D8ABBE95FAE4 /* CPV.swift */; };
-		44A4DFF8BF33233A7B513A16 /* VA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A4D162EF4D5CD77C4AFE54 /* VA.swift */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -42,8 +40,6 @@
 		279A54C2909CB15E1E84C8C6 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		44A4D15C11038BC764F259BB /* CircularProgressView-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.info; path = "CircularProgressView-Info.plist"; sourceTree = "<group>"; };
 		44A4D15D11A9281DDF5F82A1 /* DemoAppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoAppDelegate.swift; sourceTree = "<group>"; };
-		44A4D162EF4D5CD77C4AFE54 /* VA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VA.swift; sourceTree = "<group>"; };
-		44A4D29665B6D8ABBE95FAE4 /* CPV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CPV.swift; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* CircularProgressView_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CircularProgressView_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -140,8 +136,6 @@
 				E73D299F22A99A4700035EF5 /* LaunchScreen.storyboard */,
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
 				44A4D15C11038BC764F259BB /* CircularProgressView-Info.plist */,
-				44A4D29665B6D8ABBE95FAE4 /* CPV.swift */,
-				44A4D162EF4D5CD77C4AFE54 /* VA.swift */,
 			);
 			name = "Example for CircularProgressView";
 			path = CircularProgressView;
@@ -382,8 +376,6 @@
 			files = (
 				E705E1A922A446D500A2568A /* DemoViewController.swift in Sources */,
 				44A4D3AE9C374BE23E90675A /* DemoAppDelegate.swift in Sources */,
-				44A4DEE74E782881E37EB3F8 /* CPV.swift in Sources */,
-				44A4DFF8BF33233A7B513A16 /* VA.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

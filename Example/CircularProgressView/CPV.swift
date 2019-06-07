@@ -22,28 +22,22 @@ public class CPV: UIView {
 
     private var font:       UIFont?
     private var attributes: [NSAttributedString.Key: Any] = [:]
-    private var textSize                                  = CGSize.zero
-    private var animation:  ValueAnimation?
+    private var textSize:   CGSize                        = .zero
+    private var animation:  ValueAnimation                = ValueAnimation()
 
-    /**
-         * Default construction
-         */
+    /// Default constructor
     override init(frame: CGRect) {
         super.init(frame: frame)
         alpha = 0
     }
 
-    /**
-         * Default construction
-         */
+    /// Default constructor
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         alpha = 0
     }
 
-/**
-     * Set the progress
-     */
+    /// Set the target progress
     public func setProgress(_ progress: Double, animated: Bool) {
         var delaySec: Double = 0.0
         if (self.progress > 0.0 && progress <= 0.0) || (self.progress < UPPER_BOUND && progress >= 1.0) {
@@ -74,27 +68,19 @@ public class CPV: UIView {
         }
     }
 
-    //  Converted to Swift 5 by Swiftify v5.0.23302 - https://objectivec2swift.com/
-/**
-     * Animate the progress from to
-     */
-    func animateProgress(from fromValue: Double, to toValue: Double, delay delaySec: Double) {
-
-
-        if animation == nil {
-            animation = ValueAnimation()
-        }
+    /// Animate the progress
+    private func animateProgress(from fromValue: Double, to toValue: Double, delay delaySec: Double) {
         let animationBlock: MyAnimationBlock = { animationValue in
             let currentValue = fromValue + ((toValue - fromValue) * animationValue)
             self.progress = currentValue
             self.setNeedsDisplay()
         }
-        animation?.start(animationBlock, PROGRESS_ANIMATION, delay: delaySec)
+        animation.start(animationBlock, PROGRESS_ANIMATION, delay: delaySec)
     }
 
     /// Prepare the values for rendering
-    func prepare() {
-        if font == nil && progressFont != nil && progressText != nil && progressTextSize > 0 {
+    private func prepare() {
+        if font == nil && progressFont.count > 0 && progressText.count > 0 && progressTextSize > 0 {
             font = UIFont(name: progressFont, size: progressTextSize)
             // paragraph for both
             let paragraphStyle = NSMutableParagraphStyle()
@@ -102,8 +88,8 @@ public class CPV: UIView {
             paragraphStyle.alignment = .center
             // attributes for back
             attributes = [
-                NSAttributedString.Key.font: font,
-                NSAttributedString.Key.foregroundColor: progressColor,
+                NSAttributedString.Key.font: font as Any,
+                NSAttributedString.Key.foregroundColor: progressColor as Any,
                 NSAttributedString.Key.paragraphStyle: paragraphStyle
             ]
             textSize = progressText.size(withAttributes: attributes)
@@ -112,8 +98,8 @@ public class CPV: UIView {
                 progressTextSize -= 1
                 font = font!.withSize(progressTextSize)
                 attributes = [
-                    NSAttributedString.Key.font: font,
-                    NSAttributedString.Key.foregroundColor: progressColor,
+                    NSAttributedString.Key.font: font as Any,
+                    NSAttributedString.Key.foregroundColor: progressColor as Any,
                     NSAttributedString.Key.paragraphStyle: paragraphStyle
                 ]
                 textSize = progressText.size(withAttributes: attributes)
@@ -121,21 +107,11 @@ public class CPV: UIView {
         }
     }
 
-//  The converted code is limited to 2 KB.
-//  Upgrade your plan to remove this limitation.
-//
-//  Converted to Swift 5 by Swiftify v5.0.23302 - https://objectivec2swift.com/
-/**
-     * Where the magic happens
-     */
-
-/**
-     * Where the magic happens
-     */
+    /// Draw the progress view
     public override func draw(_ rect: CGRect) {
         var context: CGContext!
         prepare()
-        if font == nil || attributes == nil || progressColor == nil {
+        if font == nil || progressColor == nil {
             context = UIGraphicsGetCurrentContext()
             UIColor.clear.setFill()
             UIRectFill(rect)
@@ -177,12 +153,6 @@ public class CPV: UIView {
         UIGraphicsBeginImageContextWithOptions(rect.size, _: false, _: 0.0)
         context = UIGraphicsGetCurrentContext()
         UIColor.clear.setFill()
-//
-//  The converted code is limited to 2 KB.
-//  Upgrade your plan to remove this limitation.
-//
-//  %< ----------------------------------------------------------------------------------------- %<
-//  Converted to Swift 5 by Swiftify v5.0.23302 - https://objectivec2swift.com/
         UIRectFill(rect)
         context.setBlendMode(CGBlendMode.normal)
         progressText.draw(in: textRect, withAttributes: attributes)
@@ -201,7 +171,7 @@ public class CPV: UIView {
         let frontImage: UIImage? = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
 
-///////////////////////////////////////////////// COMPOSE
+        ///////////////////////////////////////////////// COMPOSE
         if progress >= THRESHOLD {
             backImage?.draw(at: CGPoint(x: 0, y: 0))
         }
