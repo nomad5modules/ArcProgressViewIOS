@@ -6,7 +6,7 @@ import CircularProgressView
 /// The main view controller
 class DemoViewController: UIViewController {
 
-    @IBOutlet weak var circularProgressView: CPV!
+    @IBOutlet weak var circularProgressView: CircularProgressView!
 
     @IBAction func on0pressed() {
         circularProgressView.setProgress(0, animated: true)
