@@ -8,7 +8,18 @@ extension FloatingPoint {
     @inlinable var radiansToDegrees: Self { return self * 180 / .pi }
 }
 
-
+/// PI half constant
 extension BinaryFloatingPoint {
-    @inlinable public static var piHalf: Double { return 1.57079632679 }
+    @inlinable public static var piHalf: CGFloat { return 1.57079632679 }
+}
+
+/// Count lines in string
+extension String {
+    @inlinable var lineCount: UInt {
+        return self.reduce(into: 0) { (count, letter) in
+            if letter == "\n" {
+                count += 1
+            }
+        }
+    }
 }
