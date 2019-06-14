@@ -2,10 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="43d0a329-b672-4924-bb91-470130c61bf6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../CircularProgressView/Classes/CircularProgressView.swift" beforeDir="false" afterPath="$PROJECT_DIR$/../CircularProgressView/Classes/CircularProgressView.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CircularProgressView/Classes/Util/Extensions.swift" beforeDir="false" afterPath="$PROJECT_DIR$/../CircularProgressView/Classes/Util/Extensions.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CircularProgressView/Classes/Util/VerticalCenteredTextLayer.swift" beforeDir="false" afterPath="$PROJECT_DIR$/../CircularProgressView/Classes/Util/VerticalCenteredTextLayer.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CircularProgressView/Classes/ValueAnimator.swift" beforeDir="false" afterPath="$PROJECT_DIR$/../CircularProgressView/Classes/ValueAnimator.swift" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$USER_HOME$/Library/Caches/AppCode2019.1/DerivedData/CircularProgressView-aqvmnxfewbdpqudzquwsxsygepdm/Build/Intermediates.noindex/" />
@@ -43,17 +39,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../CircularProgressView/Classes/CircularProgressView.swift">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="79">
-              <caret line="16" column="34" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
+            <state relative-caret-position="301">
+              <caret line="71" lean-forward="true" selection-start-line="71" selection-end-line="71" />
               <folding>
                 <element signature="e#1245#1332#0" />
                 <element signature="e#1366#1455#0" />
                 <element signature="e#1377#1508#0" />
-                <element signature="e#2349#2529#0" />
-                <element signature="e#3039#4292#0" />
-                <element signature="e#3813#6666#0" />
-                <element signature="e#5345#5527#0" />
-                <element signature="e#6722#7458#0" />
               </folding>
             </state>
           </provider>
@@ -255,14 +246,14 @@
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49913943" visible="true" weight="0.22239873" />
-      <window_info id="Structure" order="1" sideWeight="0.5008606" side_tool="true" visible="true" weight="0.22239873" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49863014" visible="true" weight="0.22239873" />
+      <window_info id="Structure" order="1" sideWeight="0.50136983" side_tool="true" weight="0.22239873" />
       <window_info id="Designer" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3109589" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.2041096" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.2041096" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -280,7 +271,8 @@
     <MESSAGE value="proper demo application" />
     <MESSAGE value="updated app icon" />
     <MESSAGE value="moved from objc to swift&#10;(ugly but working)" />
-    <option name="LAST_COMMIT_MESSAGE" value="moved from objc to swift&#10;(ugly but working)" />
+    <MESSAGE value="lots of optimizations and cleanup" />
+    <option name="LAST_COMMIT_MESSAGE" value="lots of optimizations and cleanup" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
@@ -531,17 +523,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../CircularProgressView/Classes/CircularProgressView.swift">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="79">
-          <caret line="16" column="34" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
+        <state relative-caret-position="301">
+          <caret line="71" lean-forward="true" selection-start-line="71" selection-end-line="71" />
           <folding>
             <element signature="e#1245#1332#0" />
             <element signature="e#1366#1455#0" />
             <element signature="e#1377#1508#0" />
-            <element signature="e#2349#2529#0" />
-            <element signature="e#3039#4292#0" />
-            <element signature="e#3813#6666#0" />
-            <element signature="e#5345#5527#0" />
-            <element signature="e#6722#7458#0" />
           </folding>
         </state>
       </provider>
