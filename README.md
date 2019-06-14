@@ -22,7 +22,7 @@ pod 'CircularProgressView'
 
 ## Author
 
-mlostek@gmail.com, mlostek@gmail.com
+mlostek@gmail.com
 
 ## License
 
