@@ -1,6 +1,6 @@
 //
-//  ArcProgressViewTests.m
-//  ArcProgressViewTests
+//  CircularProgressViewTests.m
+//  CircularProgressViewTests
 //
 //  Created by mlostek@gmail.com on 06/02/2019.
 //  Copyright (c) 2019 mlostek@gmail.com. All rights reserved.
