@@ -46,7 +46,7 @@ public class ArcProgressView: UIView {
     }
 
     /// Set the target progress
-    public func setProgress(_ progress: Double, animated: Bool) {
+    @objc public func setProgress(_ progress: Double, animated: Bool) {
         animateProgress(from: self.progress,
                         to: min(1, max(0, progress)),
                         within: animated ? progressAnimationDuration : 0)
