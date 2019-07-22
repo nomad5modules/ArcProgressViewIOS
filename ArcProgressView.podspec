@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ArcProgressView'
-  s.version          = '1.0.3'
+  s.version          = '1.0.4'
   s.summary          = 'A circular progress view'
 
 # This description is used to generate tags and improve search results.
@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
-  s.description      = 'Well, it is really just a circular progress view ;)'
+  s.description      = 'Well, it is really just a circular progress view that renders an arc with a custom text.'
 
   s.homepage         = 'https://github.com/nomad5modules/ArcProgressViewIOS'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
