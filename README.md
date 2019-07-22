@@ -1,6 +1,6 @@
 # ArcProgressView
 
-[![CI Status](https://img.shields.io/travis/mlostek@gmail.com/ArcProgressView.svg?style=flat)](https://travis-ci.org/mlostek@gmail.com/ArcProgressView)
+[![Build Status](https://app.bitrise.io/app/97b90fdf4c067f66/status.svg?token=kRHcDh1baXpnSqcbvZO9dw&branch=master)](https://app.bitrise.io/app/97b90fdf4c067f66)
 [![Version](https://img.shields.io/cocoapods/v/ArcProgressView.svg?style=flat)](https://cocoapods.org/pods/ArcProgressView)
 [![License](https://img.shields.io/cocoapods/l/ArcProgressView.svg?style=flat)](https://cocoapods.org/pods/ArcProgressView)
 [![Platform](https://img.shields.io/cocoapods/p/ArcProgressView.svg?style=flat)](https://cocoapods.org/pods/ArcProgressView)
