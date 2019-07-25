@@ -4,13 +4,13 @@ import UIKit
 
 @IBDesignable
 public class ArcProgressView: UIView {
-    @IBInspectable var progressColor:             UIColor? = nil
-    @IBInspectable var progressText:              String   = ""
-    @IBInspectable var progressTextSize:          CGFloat  = 0.0
-    @IBInspectable var progress:                  Double   = 0.0
-    @IBInspectable var progressFont:              String   = ""
-    @IBInspectable var progressAnimationDuration: Double   = 0.3
-    @IBInspectable var fadeAnimationDuration:     Double   = 1.0
+    @IBInspectable public var progressColor:             UIColor? = nil
+    @IBInspectable public var progressText:              String   = ""
+    @IBInspectable public var progressTextSize:          CGFloat  = 0.0
+    @IBInspectable public var progress:                  Double   = 0.0
+    @IBInspectable public var progressFont:              String   = ""
+    @IBInspectable public var progressAnimationDuration: Double   = 0.3
+    @IBInspectable public var fadeAnimationDuration:     Double   = 1.0
 
     /// The font
     private var font:      UIFont?        = nil
