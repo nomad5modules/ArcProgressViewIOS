@@ -9,7 +9,7 @@
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
-![arc progressview demo](Image/demo.gif)
+![arc progressview demo](https://github.com/nomad5modules/ArcProgressViewIOS/raw/master/Image/demo.gif)
 
 ## Installation
 
@@ -24,11 +24,11 @@ pod 'ArcProgressView'
 
 Beside the programmatical creation of the ArcProgressView you can use it inside a Storyboard too. Simply create an `UIView` and set the class and module to `ArcProgressView` inside the `Identity Inspector`.
 
-![identity inspector](Image/class.jpg)
+![identity inspector](https://github.com/nomad5modules/ArcProgressViewIOS/raw/master/Image/class.jpg)
 
 Once configured as `ArcProgressView` you should be able to set up its attributes in the `Attributes Inspector`
 
-![attributes inspector](Image/attributes.jpg)
+![attributes inspector](https://github.com/nomad5modules/ArcProgressViewIOS/raw/master/Image/attributes.jpg)
 
 Have fun playing around with combinations of the `Progress Color` and the views `Background Color`.
 
