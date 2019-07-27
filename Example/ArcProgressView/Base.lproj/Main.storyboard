@@ -21,103 +21,127 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="guN-95-uEp" userLabel="circular progress view" customClass="ArcProgressView" customModule="ArcProgressView">
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OGG-98-E2p">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <color key="backgroundColor" red="1" green="0.8666666666666667" blue="0.40392156862745099" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="tintColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="progressColor">
-                                        <color key="value" red="0.81176470588235294" green="0.27058823529411763" blue="0.36078431372549019" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="progressText">
-                                        <string key="value">Put any
-TEXT you 
-want here.
-Font size will automatically adjust</string>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="progressTextSize">
-                                        <integer key="value" value="36"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="progressFont" value="Courier"/>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="progressAnimationDuration">
-                                        <real key="value" value="1.5"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="progress">
-                                        <real key="value" value="0.40000000000000002"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="wJp-WV-UNx" userLabel="controls">
-                                <rect key="frame" x="16" y="587" width="343" height="60"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ebf-kD-7TG" userLabel="0%">
-                                        <rect key="frame" x="0.0" y="0.0" width="107.5" height="60"/>
-                                        <color key="backgroundColor" red="0.26666666666666666" green="0.26666666666666666" blue="0.26666666666666666" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <state key="normal" title="0%">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gradient" translatesAutoresizingMaskIntoConstraints="NO" id="3Ig-vd-7An">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                    </imageView>
+                                    <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pbl-Fp-KRQ" userLabel="circular progress view" customClass="ArcProgressView" customModule="ArcProgressView">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="10"/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="progressColor">
+                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="progressText">
+                                                <string key="value">Use any text you want.
+The font size 
+adjusts automatically  to fit
+the given space.
+
+Works with custom
+background.</string>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="progressTextSize">
+                                                <real key="value" value="36"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="progressFont" value="Courier"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="progressAnimationDuration">
+                                                <real key="value" value="1.5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="progress">
+                                                <real key="value" value="0.40000000000000002"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="on0pressed" destination="whP-gf-Uak" eventType="touchUpInside" id="fIQ-8f-y9X"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BMV-rt-Uzi" userLabel="random value">
-                                        <rect key="frame" x="117.5" y="0.0" width="108" height="60"/>
-                                        <color key="backgroundColor" red="0.26666666666666666" green="0.26666666666666666" blue="0.26666666666666666" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <state key="normal" title="Random">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="10"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="onRandomPressed" destination="whP-gf-Uak" eventType="touchUpInside" id="9dd-P6-BVH"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EYQ-Bu-Wc1" userLabel="100%">
-                                        <rect key="frame" x="235.5" y="0.0" width="107.5" height="60"/>
-                                        <color key="backgroundColor" red="0.26666666666666666" green="0.26666666666666666" blue="0.26666666666666666" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <state key="normal" title="100%">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="10"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="on100pressed" destination="whP-gf-Uak" eventType="touchUpInside" id="CtF-24-lt5"/>
-                                        </connections>
-                                    </button>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Bmk-Gy-lz2" userLabel="controls">
+                                        <rect key="frame" x="10" y="597" width="355" height="60"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="amk-gv-ZNW" userLabel="0%">
+                                                <rect key="frame" x="0.0" y="0.0" width="111.5" height="60"/>
+                                                <color key="backgroundColor" red="0.2666666667" green="0.2666666667" blue="0.2666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <state key="normal" title="0%">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="on0pressed" destination="whP-gf-Uak" eventType="touchUpInside" id="MnA-T3-t2b"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lDD-7I-FV4" userLabel="random value">
+                                                <rect key="frame" x="121.5" y="0.0" width="112" height="60"/>
+                                                <color key="backgroundColor" red="0.2666666667" green="0.2666666667" blue="0.2666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <state key="normal" title="Random">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="onRandomPressed" destination="whP-gf-Uak" eventType="touchUpInside" id="2kA-6V-wxC"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7bg-Ys-xbz" userLabel="100%">
+                                                <rect key="frame" x="243.5" y="0.0" width="111.5" height="60"/>
+                                                <color key="backgroundColor" red="0.2666666667" green="0.2666666667" blue="0.2666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <state key="normal" title="100%">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="on100pressed" destination="whP-gf-Uak" eventType="touchUpInside" id="6Pp-Lz-iFc"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="8QV-e9-Nai"/>
+                                        </constraints>
+                                    </stackView>
                                 </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="gsR-uD-BQY"/>
+                                    <constraint firstAttribute="bottom" secondItem="3Ig-vd-7An" secondAttribute="bottom" id="1pQ-hD-49V"/>
+                                    <constraint firstAttribute="trailing" secondItem="3Ig-vd-7An" secondAttribute="trailing" id="AJq-Iy-kh9"/>
+                                    <constraint firstAttribute="trailing" secondItem="Bmk-Gy-lz2" secondAttribute="trailing" constant="10" id="F4f-Us-6YP"/>
+                                    <constraint firstItem="3Ig-vd-7An" firstAttribute="top" secondItem="OGG-98-E2p" secondAttribute="top" id="NEB-pG-N6l"/>
+                                    <constraint firstAttribute="bottom" secondItem="pbl-Fp-KRQ" secondAttribute="bottom" constant="20" symbolic="YES" id="Nx7-V2-xiZ"/>
+                                    <constraint firstItem="pbl-Fp-KRQ" firstAttribute="leading" secondItem="OGG-98-E2p" secondAttribute="leading" id="RXx-2d-ybs"/>
+                                    <constraint firstAttribute="trailing" secondItem="pbl-Fp-KRQ" secondAttribute="trailing" id="Vle-wJ-NHg"/>
+                                    <constraint firstItem="3Ig-vd-7An" firstAttribute="leading" secondItem="OGG-98-E2p" secondAttribute="leading" id="eWn-bW-QYL"/>
+                                    <constraint firstAttribute="bottom" secondItem="Bmk-Gy-lz2" secondAttribute="bottom" constant="10" id="efL-fB-ei5"/>
+                                    <constraint firstItem="Bmk-Gy-lz2" firstAttribute="leading" secondItem="OGG-98-E2p" secondAttribute="leading" constant="10" id="r6x-8h-bfC"/>
+                                    <constraint firstItem="pbl-Fp-KRQ" firstAttribute="top" secondItem="OGG-98-E2p" secondAttribute="top" id="ulQ-tp-VtE"/>
                                 </constraints>
-                            </stackView>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="leading" secondItem="guN-95-uEp" secondAttribute="leading" id="7hD-Ya-46s"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="wJp-WV-UNx" secondAttribute="trailing" id="I0l-R8-K9G"/>
-                            <constraint firstItem="wJp-WV-UNx" firstAttribute="leading" secondItem="TpU-gO-2f1" secondAttribute="leadingMargin" id="SiY-HG-Q8e"/>
-                            <constraint firstAttribute="top" secondItem="guN-95-uEp" secondAttribute="top" id="bHk-kH-3ax"/>
-                            <constraint firstAttribute="bottom" secondItem="wJp-WV-UNx" secondAttribute="bottom" constant="20" id="ell-9X-WOI"/>
-                            <constraint firstAttribute="trailing" secondItem="guN-95-uEp" secondAttribute="trailing" id="kp0-pp-wBf"/>
-                            <constraint firstAttribute="bottom" secondItem="guN-95-uEp" secondAttribute="bottom" id="tij-3f-jmH"/>
+                            <constraint firstItem="OGG-98-E2p" firstAttribute="top" secondItem="TpU-gO-2f1" secondAttribute="top" id="90R-ZP-caA"/>
+                            <constraint firstAttribute="bottom" secondItem="OGG-98-E2p" secondAttribute="bottom" id="nX5-Ja-H3x"/>
+                            <constraint firstItem="OGG-98-E2p" firstAttribute="leading" secondItem="TpU-gO-2f1" secondAttribute="leading" id="q9U-ka-jgg"/>
+                            <constraint firstAttribute="trailing" secondItem="OGG-98-E2p" secondAttribute="trailing" id="s88-af-snc"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="arcProgressView" destination="guN-95-uEp" id="jeh-Hj-BMY"/>
+                        <outlet property="arcProgressView" destination="pbl-Fp-KRQ" id="u4X-rG-BeW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tc2-Qw-aMS" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -125,4 +149,7 @@ Font size will automatically adjust</string>
             <point key="canvasLocation" x="305" y="433"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="gradient" width="200" height="207.5"/>
+    </resources>
 </document>
