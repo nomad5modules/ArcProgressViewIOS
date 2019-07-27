@@ -20,7 +20,7 @@ Pod::Spec.new do |s|
   s.description      = 'This view animates smoothly between given progress values. If the progress values are coming in at a high frequency, automatic value animation can be turned off. The customisable progress text blends smoothly with the background color of the view. Beside a programmatic initialization it can be fully used within a storyboard.'
 
   s.homepage         = 'https://github.com/nomad5modules/ArcProgressViewIOS'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
+  s.screenshots      = 'https://github.com/nomad5modules/ArcProgressViewIOS/raw/master/Image/demo.gif'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'mlostek@gmail.com' => 'mlostek@gmail.com' }
   s.source           = { :git => 'https://github.com/nomad5modules/ArcProgressViewIOS.git', :tag => s.version.to_s }
