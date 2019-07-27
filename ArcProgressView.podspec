@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ArcProgressView'
-  s.version          = '1.0.7'
+  s.version          = '1.1.0'
   s.summary          = 'An arc based progress view that blends text color with background color.'
 
 # This description is used to generate tags and improve search results.
