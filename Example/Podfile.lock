@@ -1,27 +1,23 @@
 PODS:
-  - ArcProgressView (1.0.1)
-  - Expecta (1.0.6)
-  - Specta (1.0.7)
+  - ArcProgressView (1.1.0)
+  - Nimble (8.0.7)
 
 DEPENDENCIES:
   - ArcProgressView (from `../`)
-  - Expecta
-  - Specta
+  - Nimble
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
-    - Expecta
-    - Specta
+  trunk:
+    - Nimble
 
 EXTERNAL SOURCES:
   ArcProgressView:
     :path: "../"
 
 SPEC CHECKSUMS:
-  ArcProgressView: 0a53d7f0c7565e61d8b4f43c308ba2596de16133
-  Expecta: 3b6bd90a64b9a1dcb0b70aa0e10a7f8f631667d5
-  Specta: 3e1bd89c3517421982dc4d1c992503e48bd5fe66
+  ArcProgressView: 3029b9eabf0b85434c15e34d71aea0ce2c622fdc
+  Nimble: a73af6ecd4c9106f434f3d55fc54570be3739e0b
 
-PODFILE CHECKSUM: 9ffb7d307d2d6202e1155bbe59bf5dd58f63d94e
+PODFILE CHECKSUM: 9eebb7ddf4c8d96a63e8e3168032f6c54fd9c04a
 
-COCOAPODS: 1.7.2
+COCOAPODS: 1.9.1
