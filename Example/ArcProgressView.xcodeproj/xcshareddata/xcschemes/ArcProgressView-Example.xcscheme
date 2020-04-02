@@ -32,7 +32,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6003F5AD195388D20070C39A"
+               BlueprintIdentifier = "E725068D2436771D0071C7A9"
                BuildableName = "ArcProgressView_Tests.xctest"
                BlueprintName = "ArcProgressView_Tests"
                ReferencedContainer = "container:ArcProgressView.xcodeproj">

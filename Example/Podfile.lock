@@ -1,5 +1,5 @@
 PODS:
-  - ArcProgressView (1.1.0)
+  - ArcProgressView (1.2.0)
   - Nimble (8.0.7)
 
 DEPENDENCIES:
@@ -15,9 +15,9 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  ArcProgressView: 3029b9eabf0b85434c15e34d71aea0ce2c622fdc
+  ArcProgressView: fa491f3e425f6ff94e70eff6e7408383d1d7d34e
   Nimble: a73af6ecd4c9106f434f3d55fc54570be3739e0b
 
-PODFILE CHECKSUM: 9eebb7ddf4c8d96a63e8e3168032f6c54fd9c04a
+PODFILE CHECKSUM: 15ca4ff77ee9ce7cfe3a6e29fbaf5688fea57a53
 
 COCOAPODS: 1.9.1
