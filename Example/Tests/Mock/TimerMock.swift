@@ -29,7 +29,7 @@ class TimerMock: Timer {
 
     /// Hook into invalidation
     override open func invalidate() {
-//        invalidateInvocations.append(fireInvocations)
+        invalidateInvocations.append(fireInvocations)
     }
 
     /// Hook into the timer configuration
