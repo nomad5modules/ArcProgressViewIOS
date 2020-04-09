@@ -4,27 +4,23 @@ import UIKit
 
 @IBDesignable
 public class ArcProgressView: UIView {
-    @IBInspectable public var progressColor:             UIColor? = nil
-    @IBInspectable public var progressText:              String   = ""
-    @IBInspectable public var progressTextSize:          CGFloat  = 0.0
-    @IBInspectable public var progress:                  Double   = 0.0
-    @IBInspectable public var progressFont:              String   = ""
-    @IBInspectable public var progressAnimationDuration: Double   = 0.3
-    @IBInspectable public var fadeAnimationDuration:     Double   = 1.0
+    @IBInspectable public var progressColor:             UIColor?       = nil
+    @IBInspectable public var progressText:              String         = ""
+    @IBInspectable public var progressTextSize:          CGFloat        = 0.0
+    @IBInspectable public var progress:                  Double         = 0.0
+    @IBInspectable public var progressFont:              String         = ""
+    @IBInspectable public var progressAnimationDuration: Double         = 0.3
+    @IBInspectable public var fadeAnimationDuration:     Double         = 1.0
 
     /// The font
-    private var font:      UIFont?        = nil
+    private var               font:                      UIFont?        = nil
     /// The progress value animation
-    private var animation: ValueAnimation = ValueAnimation()
+    private var               animation:                 ValueAnimation = ValueAnimation()
 
     /// The main progress layer
-    private let layerProgress             = CAShapeLayer()
-    /// The mask layer used for masking text
-    private let layerMask                 = CAShapeLayer()
-    /// Foreground text layer
-    private let layerTextForeground       = VerticalCenteredTextLayer()
-    /// Background text layer
-    private let layerTextBackground       = VerticalCenteredTextLayer()
+    private let               layerForegroundProgress:   CAShapeLayer   = CAShapeLayer()
+    /// The inverted mask for the background text
+    private let               layerBackgroundMask:       CAShapeLayer   = CAShapeLayer()
 
     /// Default constructor
     override init(frame: CGRect) {
@@ -98,52 +94,58 @@ public class ArcProgressView: UIView {
         font = newFont
     }
 
+
     /// Prepare the layer for rendering
     private func prepareLayer() {
         // remove all first
         layer.sublayers?.removeAll()
-        // get the current arc path
-        let arcPath = getCurrentArc()
-        // mask layer
-        layerMask.contentsScale = UIScreen.main.scale
-        layerMask.frame = bounds
-        layerMask.path = arcPath
-        // progress layer
-        layerProgress.contentsScale = UIScreen.main.scale
-        layerProgress.frame = bounds
-        layerProgress.path = arcPath
-        layerProgress.fillColor = progressColor!.cgColor
+
+        // setup the mask that is used within the text layer
+        layerBackgroundMask.contentsScale = UIScreen.main.scale
+        layerBackgroundMask.frame = bounds
+        layerBackgroundMask.path = getCurrentArc(ccw: true)
+
         // background text layer
+        let layerTextBackground = VerticalCenteredTextLayer()
         layerTextBackground.string = progressText
         layerTextBackground.font = font
+        layerTextBackground.mask = layerBackgroundMask
         layerTextBackground.frame = bounds
         layerTextBackground.position = center
         layerTextBackground.fontSize = progressTextSize
         layerTextBackground.foregroundColor = progressColor!.cgColor
-        // foreground text layer
-        layerTextForeground.mask = layerMask
-        layerTextForeground.string = progressText
-        layerTextForeground.font = font
-        layerTextForeground.frame = bounds
-        layerTextForeground.position = center
-        layerTextForeground.fontSize = progressTextSize
-        layerTextForeground.foregroundColor = backgroundColor!.cgColor
+
+        // create inverted text layer that will be used within the progress layer
+        let invertedTextLayer = VerticalCenteredTextLayer()
+        invertedTextLayer.string = progressText
+        invertedTextLayer.font = font
+        invertedTextLayer.frame = bounds
+        invertedTextLayer.position = center
+        invertedTextLayer.fontSize = progressTextSize
+        invertedTextLayer.foregroundColor = UIColor.black.cgColor
+        invertedTextLayer.renderInverted = true
+
+        // setup the progress layer
+        layerForegroundProgress.contentsScale = UIScreen.main.scale
+        layerForegroundProgress.frame = bounds
+        layerForegroundProgress.path = getCurrentArc()
+        layerForegroundProgress.mask = invertedTextLayer
+        layerForegroundProgress.fillColor = progressColor!.cgColor
+
         // add all layers
+        layer.addSublayer(layerForegroundProgress)
         layer.addSublayer(layerTextBackground)
-        layer.addSublayer(layerProgress)
-        layer.addSublayer(layerTextForeground)
     }
 
     /// The main drawing
     public override func draw(_ rect: CGRect) {
         super.draw(rect)
-        let arcPath = getCurrentArc()
-        layerMask.path = arcPath
-        layerProgress.path = arcPath
+        layerForegroundProgress.path = getCurrentArc()
+        layerBackgroundMask.path = getCurrentArc(ccw: true)
     }
 
     /// Get the arc path for the current progress
-    @inline(__always) private func getCurrentArc() -> CGPath {
+    @inline(__always) private func getCurrentArc(ccw: Bool = false) -> CGPath {
         let clampedProgress = max(min(1 - 0.0000001, CGFloat(progress)), 0.0000001)
         let endAngle        = (clampedProgress * 360.0).degreesToRadians - CGFloat.piHalf
         let pathProgress    = CGMutablePath.init()
@@ -152,7 +154,7 @@ public class ArcProgressView: UIView {
                             radius: max(bounds.size.width, bounds.size.height),
                             startAngle: -CGFloat.piHalf,
                             endAngle: endAngle,
-                            clockwise: true)
+                            clockwise: ccw)
         return pathProgress
     }
 

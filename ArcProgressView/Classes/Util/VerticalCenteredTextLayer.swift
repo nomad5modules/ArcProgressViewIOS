@@ -5,11 +5,19 @@ import UIKit
 /// A CATextLayer that centers also vertically
 class VerticalCenteredTextLayer: CATextLayer {
 
+    /// Invert the rendering
+    var renderInverted = false
+
     /// Required init
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         contentsScale = UIScreen.main.scale
         alignmentMode = .center
+    }
+
+    /// Copy constructor
+    override init(layer: Any) {
+        super.init(layer: layer)
     }
 
     /// Default initialization
@@ -22,6 +30,11 @@ class VerticalCenteredTextLayer: CATextLayer {
     /// Main drawing function
     override open func draw(in ctx: CGContext) {
         ctx.saveGState()
+        if renderInverted {
+            ctx.setFillColor(UIColor.white.cgColor)
+            ctx.fill(bounds)
+            ctx.setBlendMode(.clear)
+        }
         ctx.translateBy(x: 0.0, y: self.getVerticalOffset())
         super.draw(in: ctx)
         ctx.restoreGState()
@@ -33,13 +46,13 @@ class VerticalCenteredTextLayer: CATextLayer {
         if let attributedString = self.string as? NSAttributedString {
             let lines = attributedString.string.lineCount
             fontSize = attributedString.size().height
-            return (self.bounds.height - CGFloat(lines) * fontSize) / 2
+            return (self.bounds.height - CGFloat(lines - 1) * fontSize) / 2 - fontSize
         }
         // if its a regular string
         if let string = self.string as? String {
             let lines = string.lineCount
             fontSize = self.fontSize
-            return (self.bounds.height - CGFloat(lines) * fontSize) / 2 - CGFloat(lines) * fontSize / 10
+            return (self.bounds.height - CGFloat(lines - 1) * fontSize) / 2 - fontSize
         }
         // fallback
         return 0
