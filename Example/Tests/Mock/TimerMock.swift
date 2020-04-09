@@ -39,6 +39,8 @@ class TimerMock: Timer {
         // return timer mock
         TimerMock.currentTimer = TimerMock()
         TimerMock.currentTimer.block = block
+        TimerMock.currentTimer.invalidateInvocations = []
+        TimerMock.currentTimer.fireInvocations = 0
         return TimerMock.currentTimer
     }
 

@@ -28,17 +28,25 @@ class ValueAnimationTests: XCTestCase {
             a.fire()
         }
         // THEN
-        expect(self.animatedValues).to(beCloseTo([0.2430,
-                                                  0.4524,
-                                                  0.6279,
-                                                  0.7696,
-                                                  0.8775,
-                                                  0.9516,
-                                                  0.9919,
-                                                  1,
-                                                  1]))
+        expect(self.animatedValues).to(beCloseTo([0.2430, 0.4524, 0.6279, 0.7696, 0.8775, 0.9516, 0.9919, 1, 1]))
         expect(TimerMock.currentTimer.fireInvocations).to(equal(9))
-//        expect(TimerMock.currentTimer.invalidateInvocations).to(equal([7]))
+        expect(TimerMock.currentTimer.invalidateInvocations).to(haveCount(1))
+        expect(TimerMock.currentTimer.invalidateInvocations.first).to(equal(7))
+    }
 
+    func testAnimationStepLong() {
+        // GIVEN
+        let underTest = ValueAnimation(timerType: TimerMock.self, stepSize: 15.33)
+        // WHEN
+        underTest.start(with: 100, block: animationBlock)
+        let a = TimerMock.currentTimer!
+        (0...7).forEach { _ in
+            a.fire()
+        }
+        // THEN
+        expect(self.animatedValues).to(beCloseTo([0.2831, 0.5192, 0.7083, 0.8504, 0.9455, 0.9936, 1, 1]))
+        expect(TimerMock.currentTimer.fireInvocations).to(equal(8))
+        expect(TimerMock.currentTimer.invalidateInvocations).to(haveCount(1))
+        expect(TimerMock.currentTimer.invalidateInvocations.first).to(equal(6))
     }
 }
