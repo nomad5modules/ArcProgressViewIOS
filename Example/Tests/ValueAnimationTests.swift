@@ -40,12 +40,12 @@ class ValueAnimationTests: XCTestCase {
         // WHEN
         underTest.start(with: 100, block: animationBlock)
         let a = TimerMock.currentTimer!
-        (0...7).forEach { _ in
+        (0...8).forEach { _ in
             a.fire()
         }
         // THEN
-        expect(self.animatedValues).to(beCloseTo([0.2831, 0.5192, 0.7083, 0.8504, 0.9455, 0.9936, 1, 1]))
-        expect(TimerMock.currentTimer.fireInvocations).to(equal(8))
+        expect(self.animatedValues).to(beCloseTo([0.2831, 0.5192, 0.7083, 0.8504, 0.9455, 0.9936, 1, 1, 1]))
+        expect(TimerMock.currentTimer.fireInvocations).to(equal(9))
         expect(TimerMock.currentTimer.invalidateInvocations).to(haveCount(1))
         expect(TimerMock.currentTimer.invalidateInvocations.first).to(equal(6))
     }
