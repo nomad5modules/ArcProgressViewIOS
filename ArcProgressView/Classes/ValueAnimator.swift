@@ -2,15 +2,14 @@
 
 import Foundation
 
-// Number of seconds between each animation step
-let kStepSize = 0.015
-
-/// Animation block
-typealias AnimationBlock = (Double) -> Void
-
 /// Animate over a given time
 class ValueAnimation {
 
+    /// Animation block type
+    typealias AnimationBlock = (Double) -> Void
+
+    /// The timer type used
+    private let timerType:      Timer.Type
     /// The timer used for every tick
     private var timer:          Timer?
     /// Total duration of the animation
@@ -19,6 +18,14 @@ class ValueAnimation {
     private var currentRuntime: Double = 0.0
     /// The animation callback block
     private var animationBlock: AnimationBlock?
+    /// Number of seconds between each animation step
+    private let stepSize:       Double
+
+    /// Construction with dependencies
+    init(timerType: Timer.Type = Timer.self, stepSize: Double = 0.015) {
+        self.timerType = timerType
+        self.stepSize = stepSize
+    }
 
     /// Start a new animation
     func start(with time: Double, block: @escaping AnimationBlock) {
@@ -30,21 +37,20 @@ class ValueAnimation {
         totalRunTime = time * 1000.0
         currentRuntime = 0
         // start timer
-        timer = Timer.scheduledTimer(timeInterval: kStepSize,
-                                     target: self,
-                                     selector: #selector(animationTick),
-                                     userInfo: nil,
-                                     repeats: true)
+        timer = timerType.scheduledTimer(withTimeInterval: stepSize,
+                                         repeats: true,
+                                         block: { [weak self] timer in
+                                             self?.animationTick(timer)
+                                         })
     }
 
 
     /// One animation tick
-    @objc func animationTick(_ animationTimer: Timer?) {
+    private func animationTick(_ animationTimer: Timer?) {
         // step size/length in milli seconds
-        let step = 1000.0 * kStepSize
+        let step = 1000.0 * stepSize
         currentRuntime += step
         let progress       = min(currentRuntime / totalRunTime, 1.0)
-
 
         // Progress is a value between 0 and 1. The easing function maps this
         // to the animationValue which is than used inside the animationBlock
@@ -59,7 +65,7 @@ class ValueAnimation {
     }
 
     /// Easing out animation
-    @inline(__always) func customEaseOut(_ t: Double) -> Double {
+    @inline(__always) private func customEaseOut(_ t: Double) -> Double {
         return 1 - pow(1 - t, 2)
     }
 

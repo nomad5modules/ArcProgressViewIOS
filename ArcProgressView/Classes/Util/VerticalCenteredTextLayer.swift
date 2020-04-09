@@ -46,13 +46,13 @@ class VerticalCenteredTextLayer: CATextLayer {
         if let attributedString = self.string as? NSAttributedString {
             let lines = attributedString.string.lineCount
             fontSize = attributedString.size().height
-            return (self.bounds.height - CGFloat(lines) * fontSize) / 2 - fontSize
+            return (self.bounds.height - CGFloat(lines - 1) * fontSize) / 2 - fontSize
         }
         // if its a regular string
         if let string = self.string as? String {
             let lines = string.lineCount
             fontSize = self.fontSize
-            return (self.bounds.height - CGFloat(lines) * fontSize) / 2 - fontSize
+            return (self.bounds.height - CGFloat(lines - 1) * fontSize) / 2 - fontSize
         }
         // fallback
         return 0
