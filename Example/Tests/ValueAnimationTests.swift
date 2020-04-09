@@ -11,7 +11,7 @@ class ValueAnimationTests: XCTestCase {
     var animatedValues: [Double] = []
 
     /// The helper block to fill animated values
-    var animationBlock: ValueAnimation.AnimationBlock!
+    var animationBlock: ValueAnimator.AnimationBlock!
 
     override func setUp() {
         animatedValues.removeAll()
@@ -20,7 +20,7 @@ class ValueAnimationTests: XCTestCase {
 
     func testAnimationStepShort() {
         // GIVEN
-        let underTest = ValueAnimation(timerType: TimerMock.self, stepSize: 0.13)
+        let underTest = ValueAnimator(timerType: TimerMock.self, stepSize: 0.13)
         // WHEN
         underTest.start(with: 1.0, block: animationBlock)
         let a = TimerMock.currentTimer!
@@ -36,7 +36,7 @@ class ValueAnimationTests: XCTestCase {
 
     func testAnimationStepLong() {
         // GIVEN
-        let underTest = ValueAnimation(timerType: TimerMock.self, stepSize: 15.33)
+        let underTest = ValueAnimator(timerType: TimerMock.self, stepSize: 15.33)
         // WHEN
         underTest.start(with: 100, block: animationBlock)
         let a = TimerMock.currentTimer!

@@ -3,10 +3,10 @@
 import Foundation
 
 /// Animate over a given time
-class ValueAnimation {
+public class ValueAnimator {
 
     /// Animation block type
-    typealias AnimationBlock = (Double) -> Void
+    public typealias AnimationBlock = (Double) -> Void
 
     /// The timer type used
     private let timerType:      Timer.Type
@@ -22,13 +22,13 @@ class ValueAnimation {
     private let stepSize:       Double
 
     /// Construction with dependencies
-    init(timerType: Timer.Type = Timer.self, stepSize: Double = 0.015) {
+    public init(timerType: Timer.Type = Timer.self, stepSize: Double = 0.015) {
         self.timerType = timerType
         self.stepSize = stepSize
     }
 
     /// Start a new animation
-    func start(with time: Double, block: @escaping AnimationBlock) {
+    open func start(with time: Double, block: @escaping AnimationBlock) {
         // clear existing timer first
         timer?.invalidate()
         timer = nil
