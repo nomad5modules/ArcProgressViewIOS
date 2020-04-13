@@ -33,4 +33,14 @@ class ExtensionTests: XCTestCase {
         expect("only one liner".lineCount).to(equal(1))
         expect("only one liner".lineCount).to(equal(1))
     }
+
+    func testDoubleExtension_easedOut() {
+        expect(0.05.easedOut).to(beCloseTo(0.0975))
+        expect(0.24.easedOut).to(beCloseTo(0.4224))
+        expect(0.74.easedOut).to(beCloseTo(0.9324))
+        expect(0.95.easedOut).to(beCloseTo(0.9975))
+        expect(464.14.easedOut).to(beCloseTo(1))
+        expect(-54.66.easedOut).to(beCloseTo(-1))
+    }
+
 }

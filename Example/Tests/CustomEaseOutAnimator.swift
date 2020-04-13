@@ -5,7 +5,7 @@ import Foundation
 import Nimble
 @testable import ArcProgressView
 
-class ValueAnimationTests: XCTestCase {
+class CustomEaseOutAnimator: XCTestCase {
 
     /// The animated values output
     var animatedValues: [Double] = []
@@ -20,9 +20,9 @@ class ValueAnimationTests: XCTestCase {
 
     func testAnimationStepShort() {
         // GIVEN
-        let underTest = ValueAnimator(timerType: TimerMock.self, stepSize: 0.13)
+        let underTest = CustomEaseOutAnimator(timerType: TimerMock.self, stepSize: 0.13)
         // WHEN
-        underTest.start(with: 1.0, block: animationBlock)
+        underTest.start(for: 1.0, block: animationBlock)
         let a = TimerMock.currentTimer!
         (0...8).forEach { _ in
             a.fire()
@@ -36,9 +36,9 @@ class ValueAnimationTests: XCTestCase {
 
     func testAnimationStepLong() {
         // GIVEN
-        let underTest = ValueAnimator(timerType: TimerMock.self, stepSize: 15.33)
+        let underTest = CustomEaseOutAnimator(timerType: TimerMock.self, stepSize: 15.33)
         // WHEN
-        underTest.start(with: 100, block: animationBlock)
+        underTest.start(for: 100, block: animationBlock)
         let a = TimerMock.currentTimer!
         (0...8).forEach { _ in
             a.fire()

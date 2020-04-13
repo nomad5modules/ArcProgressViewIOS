@@ -32,7 +32,7 @@ public class ArcProgressView: UIView {
 
     /// Default constructor
     override init(frame: CGRect) {
-        animator = ValueAnimator()
+        animator = CustomEaseOutAnimator()
         layerForegroundProgress = CAShapeLayer()
         layerBackgroundMask = CAShapeLayer()
         super.init(frame: frame)
@@ -41,7 +41,7 @@ public class ArcProgressView: UIView {
 
     /// Default constructor
     required init?(coder: NSCoder) {
-        animator = ValueAnimator()
+        animator = CustomEaseOutAnimator()
         layerForegroundProgress = CAShapeLayer()
         layerBackgroundMask = CAShapeLayer()
         super.init(coder: coder)
@@ -50,7 +50,7 @@ public class ArcProgressView: UIView {
 
     /// Main constructor with mock-able dependencies
     public init(frame: CGRect,
-                animator: ValueAnimator = ValueAnimator(),
+                animator: ValueAnimator = CustomEaseOutAnimator(),
                 layerForegroundProgress: CAShapeLayer = CAShapeLayer(),
                 layerBackgroundMask: CAShapeLayer = CAShapeLayer()) {
         self.animator = animator
@@ -75,8 +75,8 @@ public class ArcProgressView: UIView {
     }
 
     /// Animate the progress
-    private func animateProgress(from: Double, to: Double, within: Double) {
-        animator.start(with: within) { [weak self] animationValue in
+    private func animateProgress(from: Double, to: Double, within duration: ValueAnimator.TimeInSeconds) {
+        animator.start(for: duration) { [weak self] animationValue in
             guard let self = self else { return }
             self.progress = from + ((to - from) * animationValue)
             self.updateAlpha()

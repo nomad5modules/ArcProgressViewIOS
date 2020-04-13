@@ -2,20 +2,32 @@
 
 import Foundation
 
-/// Animate over a given time
-public class ValueAnimator {
+/// Interface for the value animator
+/// The value shall be animated from 0...1 within
+/// the given duration in seconds.
+public protocol ValueAnimator {
 
     /// Animation block type
-    public typealias AnimationBlock = (Double) -> Void
+    typealias AnimationBlock = (Double) -> Void
+    /// Time type
+    typealias TimeInSeconds = Double
+
+    /// Animate within given time
+    func start(for duration: TimeInSeconds, block: @escaping AnimationBlock)
+}
+
+/// Animate over a given time in a linear fashion with a custom
+/// ease out function
+public class CustomEaseOutAnimator: ValueAnimator {
 
     /// The timer type used
     private let timerType:      Timer.Type
     /// The timer used for every tick
     private var timer:          Timer?
     /// Total duration of the animation
-    private var totalRunTime:   Double = 0.0
+    private var totalRunTime:   TimeInSeconds = 0.0
     /// Time the animation is already running
-    private var currentRuntime: Double = 0.0
+    private var currentRuntime: TimeInSeconds = 0.0
     /// The animation callback block
     private var animationBlock: AnimationBlock?
     /// Number of seconds between each animation step
@@ -28,13 +40,13 @@ public class ValueAnimator {
     }
 
     /// Start a new animation
-    open func start(with time: Double, block: @escaping AnimationBlock) {
+    public func start(for duration: TimeInSeconds, block: @escaping AnimationBlock) {
         // clear existing timer first
         timer?.invalidate()
         timer = nil
         // save
         animationBlock = block
-        totalRunTime = time * 1000.0
+        totalRunTime = duration * 1000.0
         currentRuntime = 0
         // start timer
         timer = timerType.scheduledTimer(withTimeInterval: stepSize,
@@ -43,7 +55,6 @@ public class ValueAnimator {
                                              self?.animationTick(timer)
                                          })
     }
-
 
     /// One animation tick
     private func animationTick(_ animationTimer: Timer?) {
@@ -55,18 +66,13 @@ public class ValueAnimator {
         // Progress is a value between 0 and 1. The easing function maps this
         // to the animationValue which is than used inside the animationBlock
         // to calculate the current value of the animation
-        let animationValue = customEaseOut(progress)
+        let animationValue = progress.easedOut
         animationBlock?(animationValue)
         if progress >= 1.0 {
             // Animation complete
             timer?.invalidate()
             timer = nil
         }
-    }
-
-    /// Easing out animation
-    @inline(__always) private func customEaseOut(_ t: Double) -> Double {
-        return 1 - pow(1 - t, 2)
     }
 
 }
