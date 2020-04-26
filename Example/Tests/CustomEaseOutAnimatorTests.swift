@@ -5,7 +5,7 @@ import Foundation
 import Nimble
 @testable import ArcProgressView
 
-class CustomEaseOutAnimator: XCTestCase {
+class CustomEaseOutAnimatorTests: XCTestCase {
 
     /// The animated values output
     var animatedValues: [Double] = []

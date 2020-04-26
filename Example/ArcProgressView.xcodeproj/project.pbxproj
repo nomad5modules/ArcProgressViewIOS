@@ -10,11 +10,8 @@
 		44A4D19DD5AB254335F7A004 /* ArcProgressViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A4DC9CCA63ADA231FCE5FE /* ArcProgressViewTests.swift */; };
 		44A4D1F7081F68F616545777 /* ValueAnimatorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A4D0A43F9395616CEBE9FC /* ValueAnimatorMock.swift */; };
 		44A4D3AE9C374BE23E90675A /* DemoAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A4D15D11A9281DDF5F82A1 /* DemoAppDelegate.swift */; };
-		44A4D4ABD16F58A1288918FB /* VerticalCenteredTextLayerTests
-		.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A4D92C939E28B15B5342BE /* VerticalCenteredTextLayerTests
-		.swift */; };
 		44A4D8CA1D7566A8FE88132A /* TimerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A4DA49920948FC236F51B0 /* TimerMock.swift */; };
-		44A4DEDFAB3F3913E752F601 /* CustomEaseOutAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A4D9E408B3A8F62AF4EEED /* CustomEaseOutAnimator.swift */; };
+		44A4DEDFAB3F3913E752F601 /* CustomEaseOutAnimatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A4D9E408B3A8F62AF4EEED /* CustomEaseOutAnimatorTests.swift */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -46,9 +43,7 @@
 		44A4D15C11038BC764F259BB /* ArcProgressView-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "ArcProgressView-Info.plist"; sourceTree = "<group>"; };
 		44A4D15D11A9281DDF5F82A1 /* DemoAppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoAppDelegate.swift; sourceTree = "<group>"; };
 		44A4D27773AC5F5CFB292E81 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
-		44A4D92C939E28B15B5342BE /* VerticalCenteredTextLayerTests
-		.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "VerticalCenteredTextLayerTests\n.swift"; sourceTree = "<group>"; };
-		44A4D9E408B3A8F62AF4EEED /* CustomEaseOutAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomEaseOutAnimator.swift; sourceTree = "<group>"; };
+		44A4D9E408B3A8F62AF4EEED /* CustomEaseOutAnimatorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomEaseOutAnimatorTests.swift; sourceTree = "<group>"; };
 		44A4DA49920948FC236F51B0 /* TimerMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerMock.swift; sourceTree = "<group>"; };
 		44A4DC9CCA63ADA231FCE5FE /* ArcProgressViewTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArcProgressViewTests.swift; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* ArcProgressView_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArcProgressView_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -99,8 +94,6 @@
 			isa = PBXGroup;
 			children = (
 				44A4D0FEC0AD896BD6F78842 /* ExtensionTests.swift */,
-				44A4D92C939E28B15B5342BE /* VerticalCenteredTextLayerTests
-				.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -169,7 +162,7 @@
 			children = (
 				44A4D4983D251142EFD5466A /* Util */,
 				44A4D27773AC5F5CFB292E81 /* Info.plist */,
-				44A4D9E408B3A8F62AF4EEED /* CustomEaseOutAnimator.swift */,
+				44A4D9E408B3A8F62AF4EEED /* CustomEaseOutAnimatorTests.swift */,
 				44A4DB9633EA1D825AA4447A /* Mock */,
 				44A4DC9CCA63ADA231FCE5FE /* ArcProgressViewTests.swift */,
 			);
@@ -400,12 +393,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				E7250698243678A50071C7A9 /* ExtensionTests.swift in Sources */,
-				44A4DEDFAB3F3913E752F601 /* CustomEaseOutAnimator.swift in Sources */,
+				44A4DEDFAB3F3913E752F601 /* CustomEaseOutAnimatorTests.swift in Sources */,
 				44A4D8CA1D7566A8FE88132A /* TimerMock.swift in Sources */,
 				44A4D19DD5AB254335F7A004 /* ArcProgressViewTests.swift in Sources */,
 				44A4D1F7081F68F616545777 /* ValueAnimatorMock.swift in Sources */,
-				44A4D4ABD16F58A1288918FB /* VerticalCenteredTextLayerTests
-				.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
