@@ -1,0 +1,10 @@
+coverage_service: cobertura_xml
+workspace: Example/ArcProgressView.xcworkspace
+xcodeproj: Example/ArcProgressView.xcodeproj
+scheme: ArcProgressView-Example
+configuration: Debug
+source_directory: ArcProgressView
+output_directory: coverage
+binary_basename: ArcProgressView
+ignore:
+  - Example/Pods*
