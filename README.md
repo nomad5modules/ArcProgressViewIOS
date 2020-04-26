@@ -4,6 +4,7 @@
 [![Version](https://img.shields.io/cocoapods/v/ArcProgressView.svg?style=flat)](https://cocoapods.org/pods/ArcProgressView)
 [![License](https://img.shields.io/cocoapods/l/ArcProgressView.svg?style=flat)](https://cocoapods.org/pods/ArcProgressView)
 [![Platform](https://img.shields.io/cocoapods/p/ArcProgressView.svg?style=flat)](https://cocoapods.org/pods/ArcProgressView)
+[![codecov](https://codecov.io/gh/nomad5modules/ArcProgressViewIOS/branch/master/graph/badge.svg)](https://codecov.io/gh/nomad5modules/ArcProgressViewIOS)
 
 ## Example
 

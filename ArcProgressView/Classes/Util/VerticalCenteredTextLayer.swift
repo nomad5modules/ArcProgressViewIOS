@@ -21,8 +21,23 @@ class VerticalCenteredTextLayer: CATextLayer {
     }
 
     /// Default initialization
-    override init() {
+    init(progressText: String,
+         progressFont: UIFont?,
+         progressTextSize: CGFloat,
+         frame: CGRect,
+         position: CGPoint,
+         foregroundColor: CGColor,
+         maskLayer: CALayer? = nil,
+         renderInverted: Bool = false) {
         super.init()
+        super.string = progressText
+        super.font = progressFont
+        super.mask = maskLayer
+        super.frame = frame
+        super.position = position
+        super.fontSize = progressTextSize
+        super.foregroundColor = foregroundColor
+        self.renderInverted = renderInverted
         contentsScale = UIScreen.main.scale
         alignmentMode = .center
     }

@@ -4,33 +4,59 @@ import UIKit
 
 @IBDesignable
 public class ArcProgressView: UIView {
-    @IBInspectable public var progressColor:             UIColor?       = nil
-    @IBInspectable public var progressText:              String         = ""
-    @IBInspectable public var progressTextSize:          CGFloat        = 0.0
-    @IBInspectable public var progress:                  Double         = 0.0
-    @IBInspectable public var progressFont:              String         = ""
-    @IBInspectable public var progressAnimationDuration: Double         = 0.3
-    @IBInspectable public var fadeAnimationDuration:     Double         = 1.0
+
+    /// The color overlay that shows the progress
+    @IBInspectable public var progressColor:             UIColor = .black
+    /// The text shown with the progress
+    @IBInspectable public var progressText:              String  = ""
+    /// The text size of the progress text
+    @IBInspectable public var progressTextSize:          CGFloat = 0.0
+    /// The progress value itself
+    @IBInspectable public var progress:                  Double  = 0.0
+    /// The font used for the progress text
+    @IBInspectable public var progressFont:              String  = ""
+    /// The animation duration for the progress animation
+    @IBInspectable public var progressAnimationDuration: Double  = 0.3
+    /// The duration of the fade in / out when progress starts at 0 vs. reaches 1
+    @IBInspectable public var fadeAnimationDuration:     Double  = 1.0
 
     /// The font
-    private var               font:                      UIFont?        = nil
-    /// The progress value animation
-    private var               animation:                 ValueAnimation = ValueAnimation()
+    private(set) var          font:                      UIFont? = nil
 
+    /// The progress value animation
+    private var               animator:                  ValueAnimator
     /// The main progress layer
-    private let               layerForegroundProgress:   CAShapeLayer   = CAShapeLayer()
+    private let               layerForegroundProgress:   CAShapeLayer
     /// The inverted mask for the background text
-    private let               layerBackgroundMask:       CAShapeLayer   = CAShapeLayer()
+    private let               layerBackgroundMask:       CAShapeLayer
 
     /// Default constructor
     override init(frame: CGRect) {
+        animator = CustomEaseOutAnimator()
+        layerForegroundProgress = CAShapeLayer()
+        layerBackgroundMask = CAShapeLayer()
         super.init(frame: frame)
         alpha = 0
     }
 
     /// Default constructor
     required init?(coder: NSCoder) {
+        animator = CustomEaseOutAnimator()
+        layerForegroundProgress = CAShapeLayer()
+        layerBackgroundMask = CAShapeLayer()
         super.init(coder: coder)
+        alpha = 0
+    }
+
+    /// Main constructor with mock-able dependencies
+    public init(frame: CGRect,
+                animator: ValueAnimator = CustomEaseOutAnimator(),
+                layerForegroundProgress: CAShapeLayer = CAShapeLayer(),
+                layerBackgroundMask: CAShapeLayer = CAShapeLayer()) {
+        self.animator = animator
+        self.layerForegroundProgress = layerForegroundProgress
+        self.layerBackgroundMask = layerBackgroundMask
+        super.init(frame: frame)
         alpha = 0
     }
 
@@ -49,8 +75,8 @@ public class ArcProgressView: UIView {
     }
 
     /// Animate the progress
-    private func animateProgress(from: Double, to: Double, within: Double) {
-        animation.start(with: within) { [weak self] animationValue in
+    private func animateProgress(from: Double, to: Double, within duration: ValueAnimator.TimeInSeconds) {
+        animator.start(for: duration) { [weak self] animationValue in
             guard let self = self else { return }
             self.progress = from + ((to - from) * animationValue)
             self.updateAlpha()
@@ -68,17 +94,18 @@ public class ArcProgressView: UIView {
 
     /// Prepare font (only when really needed)
     private func prepareFont() {
-        if font != nil || progressFont.count == 0 || progressText.count == 0 || progressTextSize == 0 {
+        // early exit
+        guard font == nil,
+              !progressFont.isEmpty,
+              !progressText.isEmpty,
+              progressTextSize > 0,
+              var newFont = UIFont(name: progressFont, size: progressTextSize) else {
             return
         }
-        guard var newFont = UIFont(name: progressFont, size: progressTextSize) else {
-            return
-        }
-        // paragraph style
+        // paragraph with proper attributes
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.lineBreakMode = .byWordWrapping
         paragraphStyle.alignment = .center
-        // attributes for back
         var attributes: [NSAttributedString.Key: Any] = [.font: newFont as Any,
                                                          .foregroundColor: progressColor as Any,
                                                          .paragraphStyle: paragraphStyle]
@@ -106,31 +133,29 @@ public class ArcProgressView: UIView {
         layerBackgroundMask.path = getCurrentArc(ccw: true)
 
         // background text layer
-        let layerTextBackground = VerticalCenteredTextLayer()
-        layerTextBackground.string = progressText
-        layerTextBackground.font = font
-        layerTextBackground.mask = layerBackgroundMask
-        layerTextBackground.frame = bounds
-        layerTextBackground.position = center
-        layerTextBackground.fontSize = progressTextSize
-        layerTextBackground.foregroundColor = progressColor!.cgColor
+        let layerTextBackground = VerticalCenteredTextLayer(progressText: progressText,
+                                                            progressFont: font,
+                                                            progressTextSize: progressTextSize,
+                                                            frame: bounds,
+                                                            position: center,
+                                                            foregroundColor: progressColor.cgColor,
+                                                            maskLayer: layerBackgroundMask)
 
         // create inverted text layer that will be used within the progress layer
-        let invertedTextLayer = VerticalCenteredTextLayer()
-        invertedTextLayer.string = progressText
-        invertedTextLayer.font = font
-        invertedTextLayer.frame = bounds
-        invertedTextLayer.position = center
-        invertedTextLayer.fontSize = progressTextSize
-        invertedTextLayer.foregroundColor = UIColor.black.cgColor
-        invertedTextLayer.renderInverted = true
+        let invertedTextLayer   = VerticalCenteredTextLayer(progressText: progressText,
+                                                            progressFont: font,
+                                                            progressTextSize: progressTextSize,
+                                                            frame: bounds,
+                                                            position: center,
+                                                            foregroundColor: UIColor.black.cgColor,
+                                                            renderInverted: true)
 
         // setup the progress layer
         layerForegroundProgress.contentsScale = UIScreen.main.scale
         layerForegroundProgress.frame = bounds
         layerForegroundProgress.path = getCurrentArc()
         layerForegroundProgress.mask = invertedTextLayer
-        layerForegroundProgress.fillColor = progressColor!.cgColor
+        layerForegroundProgress.fillColor = progressColor.cgColor
 
         // add all layers
         layer.addSublayer(layerForegroundProgress)

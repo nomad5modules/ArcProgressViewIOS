@@ -12,6 +12,12 @@ extension FloatingPoint {
     }
 }
 
+extension Double {
+    @inlinable var easedOut: Double {
+        return 1 - pow(1 - max(min(self, 1), 0), 2)
+    }
+}
+
 /// PI half constant
 extension BinaryFloatingPoint {
     @inlinable public static var piHalf: CGFloat {
